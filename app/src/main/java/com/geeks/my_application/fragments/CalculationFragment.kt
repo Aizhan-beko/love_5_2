@@ -39,7 +39,7 @@ class CalculationFragment : Fragment() {
                 val secondName = binding.editSecond.text.toString()
 
                 if (firstName.isBlank() || secondName.isBlank()) {
-                    Toast.makeText(context, "Пожалуйста, введите оба имени", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Please, enter both names", Toast.LENGTH_LONG).show()
                     return@setOnClickListener
                 }
 

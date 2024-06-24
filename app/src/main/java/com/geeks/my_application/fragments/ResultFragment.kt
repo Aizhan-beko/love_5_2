@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.geeks.my_application.R
 import com.geeks.my_application.databinding.FragmentResultBinding
 
@@ -26,8 +27,11 @@ class ResultFragment : Fragment() {
             val percentage = it.getString("percentage")
             val result = it.getString("result")
 
-            binding.tvResult.text=percentage
-            binding.tvResult.text=result
+            binding.tvPercentage.text = percentage
+            binding.tvResult.text = result
+        }
+        binding.tryBtn.setOnClickListener{
+            findNavController().navigateUp()
         }
     }
 }
