@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.geeks.my_application.R
 import com.geeks.my_application.databinding.FragmentResultBinding
 
 class ResultFragment : Fragment() {

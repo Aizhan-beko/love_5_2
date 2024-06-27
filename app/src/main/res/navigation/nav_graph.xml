@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/calculationFragment">
+    app:startDestination="@id/onboardFragment">
 
     <fragment
         android:id="@+id/calculationFragment"
@@ -20,4 +20,20 @@
         android:name="com.geeks.my_application.fragments.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/onboardFragment"
+        android:name="com.geeks.my_application.LoveOnboard.OnboardFragment"
+        android:label="fragment_onboard"
+        tools:layout="@layout/fragment_onboard" >
+        <action
+            android:id="@+id/action_onboardFragment_to_calculationFragment"
+            app:destination="@id/calculationFragment" />
+        <action
+            android:id="@+id/action_global_calculationFragment"
+            app:destination="@id/calculationFragment" />
+        <action
+            android:id="@+id/action_global_onboardFragment"
+            app:destination="@id/calculationFragment" />
+    </fragment>
+
 </navigation>

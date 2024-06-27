@@ -1,4 +1,4 @@
-package com.geeks.my_application
+package com.geeks.my_application.LoveApi
 
 import retrofit2.Call
 import retrofit2.http.GET

@@ -1,4 +1,4 @@
-package com.geeks.my_application
+package com.geeks.my_application.LoveApi
 
 import com.google.gson.annotations.SerializedName
 
@@ -11,6 +11,5 @@ class LoveResult(
     @SerializedName("percentage")
     val percentage: String,
     @SerializedName("result")
-    val result: String,
-
+    val result: String
     )
