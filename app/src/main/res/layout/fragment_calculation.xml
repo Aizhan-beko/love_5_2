@@ -87,6 +87,7 @@
                 android:layout_marginTop="40dp"/>
 
             <ImageView
+                android:id="@+id/historyF_img"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:src="@drawable/baseline_bar_chart_24"

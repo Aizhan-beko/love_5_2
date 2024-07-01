@@ -85,8 +85,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Try Again"
+                android:layout_marginTop="5dp"
                 android:layout_gravity="center"
-                android:textSize="31sp"/>
+                android:textSize="25sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,6 +102,7 @@
                     android:layout_marginTop="50dp"/>
 
                 <ImageView
+                    android:id="@+id/img_history"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="@drawable/baseline_bar_chart_24"
@@ -122,9 +124,10 @@
                     android:textSize="21sp" />
 
                 <TextView
+                    android:id="@+id/tv_history"
                     android:layout_width="97dp"
                     android:layout_height="45dp"
-                    android:layout_marginStart="200dp"
+                    android:layout_marginStart="190dp"
                     android:src="@drawable/baseline_bar_chart_24"
                     android:text="History"
                     android:textSize="21sp" />

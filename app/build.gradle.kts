@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
 
 }
 
@@ -61,7 +62,29 @@ dependencies {
     implementation (libs.converter.gson)
 
     // Dagger Hilt
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt ("com.google.dagger:hilt-compiler:2.51.1")
+    implementation(libs.hilt.android)
+    kapt (libs.hilt.compiler)
+
+    //room
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation (libs.androidx.room.ktx)
+
+    ksp(libs.androidx.room.compiler)
+
+    // material dialog
+    implementation(libs.core)
+    implementation(libs.input)
+    implementation(libs.files)
+    implementation(libs.datetime)
+    implementation(libs.bottomsheets)
+    implementation(libs.lifecycle)
+    implementation(libs.material.v170)
 
 }
+
+kapt {
+    correctErrorTypes = true
+}
+
+

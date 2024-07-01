@@ -3,6 +3,8 @@ package com.geeks.my_application.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
+import com.geeks.my_application.History.AppDatabase
+import com.geeks.my_application.History.HistoryDao
 import com.geeks.my_application.LoveApi.LoveApiService
 import com.geeks.my_application.R
 import com.geeks.my_application.sharedpreference.SharedPreferencesHelper
@@ -11,13 +13,14 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-
 class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var sharedPreferencesHelper: SharedPreferencesHelper
     @Inject
     lateinit var loveApiService: LoveApiService
+    @Inject
+    lateinit var historyDao: HistoryDao
 
     private lateinit var binding: ActivityMainBinding
 

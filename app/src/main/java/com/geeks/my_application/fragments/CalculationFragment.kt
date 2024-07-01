@@ -6,12 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.geeks.my_application.History.HistoryDao
+import com.geeks.my_application.History.HistoryEntity
 import com.geeks.my_application.LoveApi.LoveApiService
 import com.geeks.my_application.LoveApi.LoveResult
 import com.geeks.my_application.R
 import com.geeks.my_application.databinding.FragmentCalculationBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -21,6 +25,7 @@ import javax.inject.Inject
 class CalculationFragment : Fragment() {
 
     @Inject lateinit var api: LoveApiService
+    @Inject lateinit var historyDao: HistoryDao
     private lateinit var binding: FragmentCalculationBinding
 
     override fun onCreateView(
@@ -56,6 +61,7 @@ class CalculationFragment : Fragment() {
                 override fun onResponse(call: Call<LoveResult>, response: Response<LoveResult>) {
                     if (response.isSuccessful && response.body() != null) {
                         val loveResult = response.body()!!
+                        saveToHistory(firstName, secondName, loveResult)
                         navigateToResultFragment(loveResult)
                     } else {
                         Toast.makeText(context, "Could not get a correct answer", Toast.LENGTH_LONG).show()
@@ -66,6 +72,19 @@ class CalculationFragment : Fragment() {
                     Toast.makeText(context, "Connection error", Toast.LENGTH_LONG).show()
                 }
             })
+        }
+    }
+
+    private fun saveToHistory(firstName: String, secondName: String, loveResult: LoveResult) {
+        lifecycleScope.launch {
+            val historyEntity = HistoryEntity(
+                firstName = firstName,
+                secondName = secondName,
+                result = loveResult.result,
+                percentage = loveResult.percentage
+            )
+            historyDao.insertHistory(historyEntity)
+
         }
     }
 

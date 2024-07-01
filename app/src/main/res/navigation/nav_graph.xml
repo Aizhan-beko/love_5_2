@@ -19,7 +19,12 @@
         android:id="@+id/resultFragment"
         android:name="com.geeks.my_application.fragments.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
     <fragment
         android:id="@+id/onboardFragment"
         android:name="com.geeks.my_application.LoveOnboard.OnboardFragment"
@@ -35,5 +40,10 @@
             android:id="@+id/action_global_onboardFragment"
             app:destination="@id/calculationFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.geeks.my_application.History.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 
 </navigation>
