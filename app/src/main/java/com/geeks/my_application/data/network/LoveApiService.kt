@@ -1,5 +1,6 @@
-package com.geeks.my_application.LoveApi
+package com.geeks.my_application.data.network
 
+import com.geeks.my_application.ui.fragments.result_fragment.LoveResult
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header

@@ -1,4 +1,4 @@
-package com.geeks.my_application.LoveApi
+package com.geeks.my_application.ui.fragments.result_fragment
 
 import com.google.gson.annotations.SerializedName
 

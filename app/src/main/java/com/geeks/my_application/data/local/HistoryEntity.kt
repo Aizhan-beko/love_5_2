@@ -1,4 +1,4 @@
-package com.geeks.my_application.History
+package com.geeks.my_application.data.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

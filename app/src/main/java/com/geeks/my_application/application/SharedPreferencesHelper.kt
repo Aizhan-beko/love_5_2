@@ -1,4 +1,4 @@
-package com.geeks.my_application.sharedpreference
+package com.geeks.my_application.application
 
 import android.content.SharedPreferences
 import javax.inject.Inject

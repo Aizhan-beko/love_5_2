@@ -1,4 +1,4 @@
-package com.geeks.my_application.fragments
+package com.geeks.my_application.ui.fragments.result_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -31,7 +31,7 @@ class ResultFragment : Fragment() {
             binding.tvResult.text = result
         }
         binding.tryBtn.setOnClickListener{
-            findNavController().navigateUp()
+            findNavController().popBackStack()
         }
         binding.imgHistory.setOnClickListener{
             findNavController().navigate(R.id.action_resultFragment_to_historyFragment)

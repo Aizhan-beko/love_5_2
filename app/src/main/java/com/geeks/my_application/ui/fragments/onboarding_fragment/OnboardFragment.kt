@@ -1,4 +1,4 @@
-package com.geeks.my_application.LoveOnboard
+package com.geeks.my_application.ui.fragments.onboarding_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
-import com.geeks.my_application.LoveOnboard.onboardViewPagerAdapter.OnBoardViewPagerAdapter
 import com.geeks.my_application.R
-import com.geeks.my_application.sharedpreference.SharedPreferencesHelper
+import com.geeks.my_application.application.SharedPreferencesHelper
 import com.geeks.my_application.databinding.FragmentOnboardBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

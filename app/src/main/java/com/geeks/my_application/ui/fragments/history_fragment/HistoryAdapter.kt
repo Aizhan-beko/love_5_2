@@ -1,10 +1,11 @@
-package com.geeks.my_application.History
+package com.geeks.my_application.ui.fragments.history_fragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.geeks.my_application.data.local.HistoryEntity
 import com.geeks.my_application.databinding.ItemHistoryBinding
 
 class HistoryAdapter(private val onLongClickListener: (HistoryEntity) -> Unit) :

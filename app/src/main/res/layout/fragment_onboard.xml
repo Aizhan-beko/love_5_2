@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
-    tools:context=".LoveOnboard.OnboardFragment">
+    tools:context=".ui.fragments.onboarding_fragment.OnboardFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"

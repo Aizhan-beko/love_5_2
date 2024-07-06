@@ -1,13 +1,12 @@
-package com.geeks.my_application.activity
+package com.geeks.my_application.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
-import com.geeks.my_application.History.AppDatabase
-import com.geeks.my_application.History.HistoryDao
-import com.geeks.my_application.LoveApi.LoveApiService
+import com.geeks.my_application.data.local.HistoryDao
+import com.geeks.my_application.data.network.LoveApiService
 import com.geeks.my_application.R
-import com.geeks.my_application.sharedpreference.SharedPreferencesHelper
+import com.geeks.my_application.application.SharedPreferencesHelper
 import com.geeks.my_application.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

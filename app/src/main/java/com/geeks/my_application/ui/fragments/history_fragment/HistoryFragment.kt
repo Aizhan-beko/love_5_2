@@ -1,4 +1,4 @@
-package com.geeks.my_application.History
+package com.geeks.my_application.ui.fragments.history_fragment
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.geeks.my_application.data.local.HistoryDao
+import com.geeks.my_application.data.local.HistoryEntity
 import com.geeks.my_application.R
 import com.geeks.my_application.databinding.FragmentHistoryBinding
 import dagger.hilt.android.AndroidEntryPoint

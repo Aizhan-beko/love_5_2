@@ -1,4 +1,4 @@
-package com.geeks.my_application.LoveOnboard
+package com.geeks.my_application.ui.fragments.onboarding_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

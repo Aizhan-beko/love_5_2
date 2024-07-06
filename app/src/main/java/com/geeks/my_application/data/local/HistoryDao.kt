@@ -1,4 +1,4 @@
-package com.geeks.my_application.History
+package com.geeks.my_application.data.local
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -8,11 +8,11 @@ import androidx.room.Query
 @Dao
 interface HistoryDao {
     @Insert
-    suspend fun insertHistory(historyEntity: HistoryEntity)
+    fun insertHistory(historyEntity: HistoryEntity)
 
     @Query("SELECT * FROM history_table ORDER BY firstName ASC")
-    suspend fun getAllHistorySorted(): List<HistoryEntity>
+    fun getAllHistorySorted(): List<HistoryEntity>
 
     @Delete
-    suspend fun deleteHistory(historyEntity: HistoryEntity)
+    fun deleteHistory(historyEntity: HistoryEntity)
 }
