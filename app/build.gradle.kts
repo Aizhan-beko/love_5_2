@@ -55,6 +55,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //Lottie animations
+    implementation (libs.lottie)
+
     //coroutines
     implementation(libs.kotlinx.coroutines.core.v160)
     implementation(libs.kotlinx.coroutines.android.v160)

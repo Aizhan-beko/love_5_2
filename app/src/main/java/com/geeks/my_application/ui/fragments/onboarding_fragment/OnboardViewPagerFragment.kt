@@ -28,19 +28,23 @@ class OnboardViewPagerFragment : Fragment() {
         when (requireArguments().getInt(ARG_ONBOARD_POSITION)) {
             0 -> {
                 tvLove.text = "Welcome to Love Calculator APP"
-                imgLove.setImageResource(R.drawable.love_1)
+                lottieView.setAnimation(R.raw.lottie_2)
+                lottieView.playAnimation()
             }
             1 -> {
                 tvLove.text = "Calculate love compatibility "
-                imgLove.setImageResource(R.drawable.love_2)
+                lottieView.setAnimation(R.raw.lottie_1)
+                lottieView.playAnimation()
             }
             2 -> {
                 tvLove.text = "Try your chance and get married"
-                imgLove.setImageResource(R.drawable.get_married)
+                lottieView.setAnimation(R.raw.lottie_3)
+                lottieView.playAnimation()
             }
             3 -> {
                 tvLove.text = "or terminate relationship"
-                imgLove.setImageResource(R.drawable.love_4)
+                lottieView.setAnimation(R.raw.lottie_4)
+                lottieView.playAnimation()
 
             }
         }
